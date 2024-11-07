@@ -38,3 +38,7 @@ async def get_all_jobs():
     logging.info("Retrieving all jobs")
     jobs = [job.to_dict() for job in jobs_store.values()]
     return {"jobs": jobs}
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
